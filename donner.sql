@@ -38,13 +38,13 @@ create table User (
     mdp varchar(20),
     isAdmin boolean
 );
-
 insert into User values ( default, 'Inssa', 'chalman', '2002-06-19', 'chalmanInssa1962002@gmail.com', 'chalman', 'true');
-insert into User values ( default, 'TOTO', 'Mertina claudie', '2003-06-28', 'Mertinaclaudietot@gm', 'Mertina', 'true');
+insert into User values ( default, 'TOTO', 'Mertina claudie', '2003-06-28', 'Mertinaclaudietot@gmail.com', 'Mertina', 'true');
 insert into User values ( default, 'Rakoto', 'Nahari', '2004-06-19', 'Rakoto@gmail.com', 'Nahary', 'false');
 insert into User values ( default, 'Mahefa', 'Harisoa', '2002-06-19', 'Andria@gmail.com', 'Andria', 'false');
 insert into User values ( default, 'Andraina', 'Liantsoa', '2003-08-11', 'Nahary@gmail.com', 'Andraina', 'false');
 
+/* misi view tokony ampidirina */
 select Nomimage,idCategorie,idUser,prix,description from photoproduit join produit on 
 photoproduit.idp=produit.idp order by  Nomimage limit 1;
 
@@ -85,6 +85,35 @@ insert into produit values(8,2,5,12700,'voila une chaussure interessant');
 insert into produit values(9,1,3,12700,'voila un livre interessant');
 insert into produit values(10,1,4,12700,'voila un livre interessant');
 insert into produit values(11,1,3,12700,'voila un livre interessant');
+/* inseert into produit  categorie 4*/ 
+insert into produit values(12,4,1,10000,'une pulle chaude pour l hiver');
+insert into photoproduit values (30,12,"1d96290bd4481c1fdfb79ebc6529c2a1.jpg");
+insert into produit values(13,4,2,25000,'une pulle blanche chaude pour l hiver');
+insert into photoproduit values (31,13,"7aefce0e5f1a9b6b6125721a925b7d50.jpg");
+insert into produit values(14,4,3,15000,'une cardigan chaude pour l hiver');
+insert into photoproduit values (32,14,"add7730534abbc0369da44149e828597.jpg");
+insert into produit values(15,4,4,30000,'lot deux pull ');
+insert into photoproduit values (33,15,"add7730534abbc0369da44149e828597.jpg");
+/*vetement*/
+/* inseert into produit  chaussure 4*/ 
+insert into produit values(16,2,1,30000,'bouttes vrai marque');
+insert into photoproduit values (34,16,"d8b5c0161941133b1af154b3a94df6f8.jpg");
+insert into produit values(17,2,2,8000,'converse de luxe');
+insert into photoproduit values (35,17,"4e302e9bb0a87264be1e650a1e1648b5.jpg");
+insert into produit values(18,2,3,11000,'nouveaute chaussure');
+insert into photoproduit values (36,18,"97c51d5173049635c1b3c032634d1850.jpg");
+insert into produit values(19,2,4,10000,'chaussure de sport');
+insert into photoproduit values (37,19,"ed5c61468802deaaa88255546484c7bb.jpg");
+/* inseert into produit  chaussure 1*/ 
+insert into produit values(20,2,3,30000,'developpement personnelle');
+insert into photoproduit values (38,20,"016f1ed5f70da8ce61e2c29d5017d79e.jpg");
+insert into produit values(21,2,4,27000,'developpement personnelle');
+insert into photoproduit values (39,21,"21e36ff12770f472d62839863db6760e.jpg");
+insert into produit values(22,2,1,33000,'developpement personnelle');
+insert into photoproduit values (40,22,"e651fc3642ec0be483fb07da3812250f.jpg");
+insert into produit values(23,2,2,10000,'developpement personnelle');
+insert into photoproduit values (41,23,"6b82b2b038f0ba7f3aad4d570ad4fb75.jpg");
+
 
 insert into photoproduit values
 (6,1,"57c70a99c5c146ad10e46b58cc39239d.jpg"),
