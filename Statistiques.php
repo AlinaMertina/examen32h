@@ -14,10 +14,7 @@
         public function getStat() {
             $data['nc'] = $this->stat->getNbClientInscrit();
             $data['npe'] = $this->stat->getNbProduitEchanger();
-            if(isset($_SESSION['idadmin'])){
-                $data['admin']=0;
-            }
-            $this->load->view('header',$data);
+            $this->load->view('header');
             $this->load->view('statistiques', $data);
             $this->load->view('footer');
         }
