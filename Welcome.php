@@ -12,6 +12,7 @@ class Welcome extends CI_Controller {
 		$this->load->helper('url_helper');
 		$this->load->model('accuille_model','accuille');
 		$this->load->model('takalo_model','takalo_model');
+		session_start();
      }
 	public function index()
 	{

@@ -6,6 +6,7 @@
             $this->load->helper('url_helper');
             $this->load->model('partie2_model','stat');
             $this->load->model('accuille_model','accuille');
+            session_start();
         }
 
         public function traitSearch() {

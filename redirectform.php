@@ -11,6 +11,7 @@ class Redirectform extends CI_Controller {
 		 }*/
          $this->load->model('ajoutbd_model','ajout');
          $this->load->helper('url_helper');
+         session_start();
 	 }
 	public function ajoutproduit(){
         $_SESSION['user']=1;
