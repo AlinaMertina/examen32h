@@ -40,6 +40,10 @@
                 </div>
               </div>
             </div>
+            <div id="lien" >
+          <a href="<?php echo base_url("accuille/listePourcentage/?pourc=1&&prix=".$prix[$i]."&&idproduit=".$idp[$i] ); ?>"><b style="font-size:30px;color:blue;">+ /_</b>10</a>
+          <a href="<?php echo base_url("accuille/listePourcentage/?pourc=2&&prix=".$prix[$i]."&&idproduit=".$idp[$i] ); ?>"><b style="font-size:30px;color:blue;">+ /_</b>20</a>
+    </div>
           </div>
                 <?php } ?>
 

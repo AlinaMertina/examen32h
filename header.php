@@ -49,11 +49,13 @@
 
         <nav id="navbar" class="navbar">
           <ul>
-            <li><a class="nav-link scrollto active" href="<?php echo base_url("accuille/index/");?>">Accuille</a></li>
+            
             <?php if(isset($admin)){ ?>
+              <li><a class="nav-link scrollto active" href="<?php echo base_url("accuille/liste/");?>">Accuille</a></li>
               <li><a class="nav-link scrollto" href="<?php echo base_url("accuille/faireRecherche/");?>">recherche</a></li>
               <li><a class="nav-link scrollto " href="<?php echo base_url("Statistiques/getStat/");?>">Statistiques</a></li>
             <?php }else{ ?>
+              <li><a class="nav-link scrollto active" href="<?php echo base_url("accuille/index/");?>">Accuille</a></li>
               <li><a class="nav-link scrollto" href="<?php echo base_url("accuille/listeproposition/");?>">proposition</a></li>
               <li><a class="nav-link scrollto " href="<?php echo base_url("accuille/listeautreobject/");?>">Produit</a></li>
               <li class="dropdown"><a href="#"><span>Gestion de mes poste</span> <i class="bi bi-chevron-down"></i></a>
@@ -72,3 +74,10 @@
       </div><!-- End Header Container -->
     </div>
   </header><!-- End Header -->
+  
+      <?php if(isset($admin)){ ?>
+      <form action="" method="POST">
+          </input type="text" name="categorie" >
+          </input type="submit"/>
+      </from>
+  <?php } ?>

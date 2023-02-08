@@ -38,13 +38,13 @@
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate = "Username is reauired">
 						<span class="label-input100">Email</span>
-						<input class="input100" type="email" name="email" placeholder="Taper votre email">
+						<input class="input100" type="email" name="email" placeholder="Taper votre email" >
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Password is required">
 						<span class="label-input100">Mot de passe</span>
-						<input class="input100" type="password" name="mdp" placeholder="taper votre mot de passe">
+						<input class="input100" type="password" name="mdp" placeholder="taper votre mot de passe" >
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 
