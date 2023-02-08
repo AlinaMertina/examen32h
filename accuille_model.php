@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Accuille_model extends CI_Model{
+class Accuille_model extends CI_Model 
+{
     
     public function get_categorie(){
         $requete="select  * from categorie";
@@ -122,6 +123,27 @@ class Accuille_model extends CI_Model{
     public function getHistorique($idp){
         $requete="select User.Nom,Prenom,dated,User.id,Proposition.idproduit1 as idproduit  from AccepterProduit join Proposition on Proposition.idproposition=AccepterProduit.idproposition join User on User.id = Proposition.idUtilisateur1  where Proposition.idproduit1=%d";
         $requete=sprintf($requete,$idp);
+        $query = $this->db->query($requete);
+        $tabe = array();
+        $a=0;
+        foreach($query->result_array() as $row){
+            $tabe[$a]=$row;
+            $a++;
+        }
+        return $tabe;
+    }
+    public function getlisteproduitlien($prixproduit,$dixAudeux,$iduser,$idp){
+        $MdixpC=0;
+        $PdixpC=0;
+        if($dixAudeux==1){
+            $MixpC= $prixproduit-($prixproduit*0.1);
+            $PdixpC=$prixproduit+($prixproduit*0.1);
+        }else{
+            $MixpC= $prixproduit-($prixproduit*0.2);
+            $PdixpC=$prixproduit+($prixproduit*0.2);
+        }
+        $requete ="select produit.prix,Nomimage,produit.idp,produit.idUser from produit join photoproduit on photoproduit.idp = produit.idp where (produit.prix BETWEEN %d AND  %d ) and idUser!=%d and produit.idp!=%d";
+        $requete=sprintf($requete,$MixpC,$PdixpC,$iduser,$idp);
         $query = $this->db->query($requete);
         $tabe = array();
         $a=0;

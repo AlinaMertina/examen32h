@@ -1,6 +1,7 @@
 <?php 
     if(! defined('BASEPATH')) exit ('No direct script access allowed');
-    class partie2_model extends CI_Model {
+    class Partie2_model extends CI_Model 
+    {
         public function getNbClientInscrit() {    //Avoir le nombre des clients
             $query = $this->db->query("select count(id) from user where isAdmin = false");
             $row = $query->row_array();

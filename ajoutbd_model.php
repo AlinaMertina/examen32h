@@ -14,6 +14,11 @@ class Ajoutbd_model extends CI_Model{
         }
         return $a;
    }
+   public fuction ajoutcategorie($categorie){
+        $requete="insert into categorie(Nom) values('%s')";
+        $requete=sprintf($requete,$categorie);
+        $query = $this->db->query($requete);
+   }
    public function ajoutphotoproduit($idp ,$nomimage){
     $requete="insert into photoproduit(idp,Nomimage) values(%d,'%s')";
     $requete=sprintf($requete,$idp,$nomimage);
